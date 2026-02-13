@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日数カウントアプリ</title>
 
+<!-- Google Font: ユウセイ・マジック -->
+<link href="https://fonts.googleapis.com/css2?family=Yuusei+Magic&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>日数カウントアプリ</header>
+<div class="container">
+
+  <!-- モード選択 -->
+  <div class="mode-select">
+    <label><input type="radio" name="mode" value="countup" checked> 経過日数</label>
+    <label><input type="radio" name="mode" value="countdown"> カウントダウン</label>
+  </div>
+
+  <!-- 入力フォーム -->
+  <div class="form">
+    <input type="text" id="title" placeholder="イベント名">
+
+    <!-- 開始日時 -->
+    <div class="datetime-input">
+      <label>開始日
+        <input type="date" id="start-date">
+      </label>
+      <label>時間
+        <input type="time" id="start-time">
+      </label>
+    </div>
+
+    <!-- 終了日時（任意） -->
+    <div class="datetime-input">
+      <label>終了日
+        <input type="date" id="end-date">
+      </label>
+      <label>時間
+        <input type="time" id="end-time">
+      </label>
+    </div>
+
+    <input type="color" id="color" value="#009688">
+    <button id="addBtn">追加</button>
+  </div>
+
+  <!-- 保存済みイベント一覧 -->
+  <div class="list-section">
+    <h3>保存済みイベント一覧</h3>
+    <div id="list"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
